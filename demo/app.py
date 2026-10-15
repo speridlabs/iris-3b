@@ -265,7 +265,7 @@ with gr.Blocks(title="Iris-3B · Speridlabs", theme=theme, css=CSS + VIEWER_CSS,
                     with gr.Accordion("Settings", open=False):
                         negative = gr.Textbox(label="Negative prompt", value=cfg.sample.negative_prompt)
                         size = gr.Dropdown(list(SIZES), value=first["size"], label="Size (width × height)")
-                        steps = gr.Slider(10, 150, value=50, step=1, label="Steps")
+                        steps = gr.Slider(10, 150, value=first["steps"], step=1, label="Steps")
                         cfg_scale = gr.Slider(1.0, 10.0, value=first["cfg"], step=0.1, label="Guidance scale")
                         seed = gr.Number(value=first["seed"], precision=0, label="Seed")
                         randomize = gr.Checkbox(value=False, label="Random seed")
